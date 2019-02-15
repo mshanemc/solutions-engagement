@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "CollaborationGroup",
+                "referenceId": "CollaborationGroupRef1"
+            },
+            "Name": "Sales Support",
+            "CollaborationType": "Public",
+            "InformationBody": "<p><a href=\"https://www.salesforce.com\" target=\"_blank\">Global price lists</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Deal Win Stories</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Deal support</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Marketing collateral</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Who do I ask about any Product</a></p>",
+            "Description": "Everything you need for your deals, all in one easy to find place"
+        },
+        {
+            "attributes": {
+                "type": "CollaborationGroup",
+                "referenceId": "CollaborationGroupRef2"
+            },
+            "Name": "Remote Workers",
+            "CollaborationType": "Public",
+            "InformationBody": "<p><b>Useful links</b></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">VPN support</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Tips for remote workers</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Our next virtual happy hour</a></p><p><br></p>",
+            "Description": "A place for remote workers to gather virtually, share tips and trick with their peers, ask questions, and get support."
+        }
+    ]
+}
