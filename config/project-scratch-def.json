@@ -1,0 +1,21 @@
+{
+  "orgName": "solutions-engagement",
+  "edition": "Developer",
+  "features": [
+    "Communities", "SiteDotCom", "Sites", "Knowledge"
+  ],
+  "settings": {
+    "liveAgentSettings" : {
+      "enableLiveAgent" : true
+    },
+    "knowledgeSettings" : {
+      "enableKnowledge": true
+    },
+    "orgPreferenceSettings": {
+      "networksEnabled": true,
+      "s1DesktopEnabled": true,
+      "pathAssistantsEnabled": true,
+      "s1EncryptedStoragePref2": false
+    }
+  }
+}
