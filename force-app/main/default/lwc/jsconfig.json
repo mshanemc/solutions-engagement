@@ -2,7 +2,14 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/featured-tile": [
+                "featuredTile/featuredTile.js"
+            ],
+            "c/image-banner": [
+                "imageBanner/imageBanner.js"
+            ]
+        }
     },
     "include": [
         "**/*",

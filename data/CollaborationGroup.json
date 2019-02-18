@@ -19,6 +19,15 @@
             "CollaborationType": "Public",
             "InformationBody": "<p><b>Useful links</b></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">VPN support</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Tips for remote workers</a></p><p><a href=\"https://www.salesforce.com\" target=\"_blank\">Our next virtual happy hour</a></p><p><br></p>",
             "Description": "A place for remote workers to gather virtually, share tips and trick with their peers, ask questions, and get support."
+        },
+        {
+            "attributes": {
+                "type": "CollaborationGroup",
+                "referenceId": "CollaborationGroupRef3"
+            },
+            "Name": "Photography Fans",
+            "CollaborationType": "Public",
+            "Description": "Maybe you take amazing pictures.  Maybe you just want to see some amazing pictures.  This is the groups for sharing your best photos. (originals only, please)"
         }
     ]
 }

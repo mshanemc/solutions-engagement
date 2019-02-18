@@ -1,0 +1,39 @@
+<aura:component implements="lightning:homeTemplate" description="full-width header, 3 tiles, then a main column with right sidebar">
+    
+    <aura:attribute name="header" type="Aura.Component[]" />
+    <aura:attribute name="feature_left" type="Aura.Component[]" />
+    <aura:attribute name="feature_center" type="Aura.Component[]" />
+    <aura:attribute name="feature_right" type="Aura.Component[]" />
+    <aura:attribute name="main" type="Aura.Component[]" />
+    <aura:attribute name="sidebar" type="Aura.Component[]" />
+
+    <div>
+        <lightning:layout class="slds-m-bottom_medium" pullToBoundary="small">
+            <lightning:layoutItem size="12">
+                {!v.header}
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        <lightning:layout class="slds-m-vertical_medium" pullToBoundary="small">
+            <lightning:layoutItem size="4" padding="horizontal-small">
+                {!v.feature_left}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="horizontal-small">
+                {!v.feature_center}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="horizontal-small">
+                {!v.feature_right}
+            </lightning:layoutItem>            
+        </lightning:layout>
+
+        <lightning:layout class="slds-m-vertical_medium" pullToBoundary="small">
+            <lightning:layoutItem size="8" padding="horizontal-small">
+                {!v.main}
+            </lightning:layoutItem>            
+            <lightning:layoutItem size="4" padding="horizontal-small">
+                {!v.sidebar}
+            </lightning:layoutItem>            
+        </lightning:layout>
+    </div>
+
+</aura:component>	

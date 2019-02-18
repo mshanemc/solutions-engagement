@@ -1,0 +1,14 @@
+<design:component label="Two Region Custom App Page Template">
+    <flexipage:template >        
+        <flexipage:region name="header" label="Header" defaultWidth="Xlarge">
+            <flexipage:formfactor type="MEDIUM" width="SMALL" />
+        </flexipage:region>
+        <flexipage:region name="feature_left" label="Featured App 1" defaultWidth="SMALL" />
+        <flexipage:region name="feature_center" label="Featured App 2" defaultWidth="SMALL" />
+        <flexipage:region name="feature_right" label="Featured App 3" defaultWidth="SMALL" />
+        <flexipage:region name="main" label="Main" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+        </flexipage:region>
+        <flexipage:region name="sidebar" label="Right Sidebar" defaultWidth="SMALL" />
+    </flexipage:template>
+</design:component>
