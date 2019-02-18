@@ -5,7 +5,7 @@ ContentDocument desk = [SELECT Id, Title, LatestPublishedVersionId FROM ContentD
 
 // ask a question in the remote workers group?
 feeditem remoteQuestion = new feeditem();
-remoteQuestion.body = 'I\'m really struggling with posture since coming back to work.  I miss my sit/stand desk back at HQ.  What do you use in your home ofremoteQuestionce?';
+remoteQuestion.body = 'I\'m really struggling with posture since coming back to work.  I miss my sit/stand desk back at HQ.  What do you use in your home office?';
 remoteQuestion.parentId = remoteGroup.Id;
 remoteQuestion.createdDate = system.now().addHours(-1);
 insert remoteQuestion;
