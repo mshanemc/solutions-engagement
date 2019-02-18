@@ -4,5 +4,13 @@
 
 package.xml
 **/jsconfig.json
-AppSwitcher.appMenu
 **/.eslintrc.json
+
+# appMenu bug
+AppSwitcher.appMenu
+**/appMenus
+
+
+
+
+# **/connectedApps
