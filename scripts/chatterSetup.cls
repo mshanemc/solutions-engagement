@@ -1,7 +1,19 @@
 CollaborationGroup salesGroup = [select id from CollaborationGroup where name = 'Sales Support'];
 CollaborationGroup remoteGroup = [select id from CollaborationGroup where name = 'Remote Workers'];
 
+User Willy = [select Id, Name FROM User WHERE Name = 'William Loman'];
+User Jesse = [select Id, Name FROM User WHERE Name = 'Jesse Sanchez'];
+
+insert new CollaborationGroupMember(CollaborationGroupId = salesGroup.Id, MemberId= Willy.Id);
+
 ContentDocument desk = [SELECT Id, Title, LatestPublishedVersionId FROM ContentDocument WHERE Title = 'desk'];
+
+feeditem salesQuestion = new feeditem();
+salesQuestion.body = 'Do we have the updated customer process documentation?';
+salesQuestion.CreatedById = Willy.Id;
+salesQuestion.parentId = salesGroup.Id;
+salesQuestion.createdDate = system.now().addHours(-14);
+insert salesQuestion;
 
 // ask a question in the remote workers group?
 feeditem remoteQuestion = new feeditem();
@@ -13,7 +25,7 @@ insert remoteQuestion;
 FeedComment remoteResponse = new FeedComment();
 remoteResponse.CommentBody = 'I have on of these...Purchasing has a new program where remote workers can get office furniture at the same price the company does, which is what I used.  You can find the policy and request form in Concierge';
 remoteResponse.FeedItemId = remoteQuestion.Id;
-remoteResponse.CreatedBy = [select Id, Name from User where Name != 'Jenny Nunez' limit 1];
+remoteResponse.CreatedById = Jesse.Id;
 remoteResponse.CreatedDate = system.now().addMinutes(-25);
 remoteResponse.RelatedRecordId = desk.LatestPublishedVersionId;
 insert remoteResponse;
@@ -49,6 +61,7 @@ cdl.ContentDocumentId = [SELECT Id, Title FROM ContentDocument WHERE Title = 'fl
 cdl.LinkedEntityId = salesGroup.Id;
 cdl.shareType = 'V';
 insert cdl;
+
 
 
 

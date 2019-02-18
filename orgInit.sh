@@ -7,6 +7,7 @@ sfdx force:user:permset:assign -n solutions
 sfdx force:apex:execute -f scripts/connectedAppSetup.cls
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez'"
 sfdx force:data:record:update -s User -w "Name='Integration User'" -v "FirstName='William' LastName='Loman'"
+sfdx force:data:record:update -s User -w "Name='Security User'" -v "FirstName='Jesse' LastName='Sanchez'"
 sfdx force:data:tree:import -f data/CollaborationGroup.json
 sfdx shane:user:photo -g Jenny -l Nunez -f assets/jenny.jpeg
 sfdx shane:data:file:upload -f assets/flowchart.pdf
