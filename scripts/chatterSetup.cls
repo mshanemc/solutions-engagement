@@ -1,3 +1,5 @@
+delete [select id from feeditem];
+
 CollaborationGroup salesGroup = [select id from CollaborationGroup where name = 'Sales Support'];
 CollaborationGroup remoteGroup = [select id from CollaborationGroup where name = 'Remote Workers'];
 
