@@ -14,4 +14,10 @@ sfdx shane:data:file:upload -f assets/flowchart.pdf
 sfdx shane:data:file:upload -f assets/desk.jpg
 sfdx force:apex:execute -f scripts/chatterSetup.cls
 
+# TODO: install safety package
+# sfdx shane:github:package:install -g mshanemc -r safety
+# sfdx force:user:permset:assign -n Safety
+# sfdx force:data:bulk:upsert -f data/incident_reports.csv -s Incident_Report__c -i id
+# sfdx force:data:bulk:upsert -f data/observations.csv -s Observation__c -i id
+
 sfdx force:org:open -p /lightning/setup/ThemingAndBranding/home
