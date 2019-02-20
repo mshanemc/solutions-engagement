@@ -1,17 +1,17 @@
-sfdx force:org:create -f config/project-scratch-def.json -d 1 -s
+sfdx shane:org:create -f config/project-scratch-def.json -d 1 -s -n --userprefix electron --userdomain ee.demo
 
 # cadalys concierge
 sfdx force:package:install --package 04t460000027gmI -w 50 -r
 # TODO: create some past tickets via bulk load
 
 sfdx shane:github:package:install -g mshanemc -r lwc-org-chart
+sfdx force:user:permset:assign -n OrgChart
 sfdx force:user:create Firstname=Report Lastname=One IsActive=false Title=Designer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Two IsActive=false Title=Designer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Three IsActive=false Title=Engineer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Four IsActive=false Title=Engineer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Five IsActive=false Title=Engineer MobilePhone=8324728021
 sfdx force:user:create Firstname=Sir Lastname=Boss IsActive=false Title=CEO MobilePhone=8324728021
-
 sfdx force:apex:execute -f scripts/orgChartSetup.cls
 
 sfdx force:source:push

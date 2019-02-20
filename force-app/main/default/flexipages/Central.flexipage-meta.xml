@@ -140,6 +140,68 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>buttonText</name>
+                <value>Use Concierge</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>buttonVariant</name>
+                <value>brand</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>colorHex</name>
+                <value>rgb(200,208,217)</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>icon</name>
+                <value>utility:magicwand</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>iconVariant</name>
+                <value>inverse</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>textColor</name>
+                <value>black</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Tickets for IT, HR &amp; Facilities</value>
+            </componentInstanceProperties>
+            <componentName>featuredTile</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>buttonText</name>
+                <value>Start Learning</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>buttonVariant</name>
+                <value>inverse</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>colorHex</name>
+                <value>green</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>icon</name>
+                <value>utility:trailhead</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>iconVariant</name>
+                <value>inverse</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>textColor</name>
+                <value>white</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Electron Training (myTrailhead)</value>
+            </componentInstanceProperties>
+            <componentName>featuredTile</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>home:assistant</componentName>
         </componentInstances>
         <componentInstances>
