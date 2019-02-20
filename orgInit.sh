@@ -1,4 +1,5 @@
 sfdx shane:org:create -f config/project-scratch-def.json -d 1 -s -n --userprefix electron --userdomain ee.demo
+sfdx force:data:bulk:upsert -f data/Knowledge__kav.csv -i id -s Knowledge__kav 
 
 # cadalys concierge
 sfdx force:package:install --package 04t460000027gmI -w 50 -r
@@ -17,7 +18,7 @@ sfdx force:apex:execute -f scripts/orgChartSetup.cls
 sfdx force:source:push
 sfdx force:user:permset:assign -n solutions
 sfdx force:apex:execute -f scripts/connectedAppSetup.cls
-sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez'"
+sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 sfdx force:data:record:update -s User -w "Name='Integration User'" -v "FirstName='William' LastName='Loman'"
 sfdx force:data:record:update -s User -w "Name='Security User'" -v "FirstName='Jesse' LastName='Sanchez'"
 sfdx force:data:tree:import -f data/CollaborationGroup.json
