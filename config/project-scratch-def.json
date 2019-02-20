@@ -9,7 +9,8 @@
       "enableLiveAgent" : true
     },
     "knowledgeSettings" : {
-      "enableKnowledge": true
+      "enableKnowledge": true,
+      "enableLightningKnowledge": true
     },
     "orgPreferenceSettings": {
       "networksEnabled": true,
