@@ -17,19 +17,33 @@ x.cncrgdemo__Field_To_Display__c = 'Summary,';
 insert x;
 
 // put the contact on our user
-contact c = new contact(FirstName = 'Jenny', LastName = 'Nunez', Email = 'shane.mclaughlin@salesforce.com', cncrgdemo__UserId__c = UserInfo.getUserId());
-insert c;
-
-
-
-// let's have some ticket history
 List<case> cases = new List<case>();
-cases.add(new case(Subject = 'Laptop Replacement', ContactId = c.Id, Status='Closed', Origin='Concierge'));
-cases.add(new case(Subject = 'Badge Renewal', ContactId = c.Id, Status='Closed', Origin='Concierge'));
-cases.add(new case(Subject = 'Address Change', ContactId = c.Id, Status='Closed', Origin='Concierge'));
-cases.add(new case(Subject = 'VPN problems', ContactId = c.Id, Status='Closed', Origin='Concierge'));
-cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = c.Id, Status='Closed', Origin='Concierge'));
-cases.add(new case(Subject = 'Starting maternity leave', ContactId = c.Id, Status='Closed', Origin='Concierge'));
+
+contact jn = new contact(FirstName = 'Jenny', LastName = 'Nunez', Email = 'shane.mclaughlin@salesforce.com', cncrgdemo__UserId__c = UserInfo.getUserId());
+insert jn;
+
+// let's have some ticket history for Jenny
+cases.add(new case(Subject = 'Laptop Replacement', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Badge Renewal', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Address Change', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'VPN problems', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+cases.add(new case(Subject = 'Starting maternity leave', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
+
+List<Contact> otherEmployees = new List<Contact>();
+otherEmployees.add(new contact(FirstName = 'Isaac', LastName = 'Payne'));
+otherEmployees.add(new contact(FirstName = 'Bandar', LastName = 'El-Eita'));
+otherEmployees.add(new contact(FirstName = 'Jessica', LastName = 'Liu'));
+otherEmployees.add(new contact(FirstName = 'Shannon', LastName = 'Duffy'));
+otherEmployees.add(new contact(FirstName = 'Eric', LastName = 'Igerbase'));
+insert otherEmployees;
+
+cases.add(new case(Subject = 'Laptop Replacement', ContactId = otherEmployees[0].Id, Status='Working', Origin='Concierge'));
+cases.add(new case(Subject = 'Lost my phone again (sorry!)', ContactId = otherEmployees[1].Id, Status='New', Origin='Concierge'));
+cases.add(new case(Subject = 'Laptop screen has weird glowing ring in the middle', ContactId = otherEmployees[2].Id, Status='Working', Origin='Concierge'));
+cases.add(new case(Subject = 'VPN is super slow', ContactId = otherEmployees[3].Id, Status='Escalated', Origin='Concierge'));
+cases.add(new case(Subject = 'I need Access to Photoshop', ContactId = otherEmployees[4].Id, Status='New', Origin='Concierge'));
+
 insert cases;
 
 // get record type

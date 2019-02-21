@@ -32,11 +32,14 @@ sfdx force:user:permset:assign -n Safety
 sfdx force:data:bulk:upsert -f data/incident_reports.csv -s Incident_Report__c -i id
 sfdx force:data:bulk:upsert -f data/observations.csv -s Observation__c -i id
 
-
 sfdx force:apex:execute -f scripts/conciergeSetup.cls
 
 sfdx force:org:open -p /lightning/setup/ThemingAndBranding/home
 sfdx shane:user:password:set -g Jenny -l Nunez -p sfdx1234
 
-# # TODO: set the photos properly instead of my evil version
-sfdx shane:user:allPhotos
+# set the photos properly instead of my evil version
+sfdx shane:user:photo -g William -l Loman -f assets/loman.jpeg
+sfdx shane:user:photo -g Sir -l Boss -f assets/ceo.jpeg
+sfdx shane:user:photo -g Jesse -l Sanchez -f assets/jesse.jpeg
+
+sfdx shane:user:allPhotos -f assets/userPhotos
