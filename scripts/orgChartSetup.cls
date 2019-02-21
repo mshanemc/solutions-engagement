@@ -1,4 +1,4 @@
-user main = [select title, managerId, MobilePhone from user where firstname = 'User' and lastname = 'User'];
+user main = [select title, managerId, MobilePhone from user where firstname = 'Jenny' and lastname = 'Nunez'];
 user integ = [select id, title, MobilePhone, managerId from user where firstname = 'Integration' and lastname = 'User'];
 user sec = [select id, title, ManagerId, MobilePhone from user where firstname = 'Security' and lastname = 'User'];
 user ceo = [select id, title, MobilePhone from user where firstname = 'Sir' and lastname = 'Boss'];

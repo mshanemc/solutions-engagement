@@ -22,3 +22,15 @@ cases.add(new case(Subject = 'VPN problems', ContactId = c.Id, Status='Closed', 
 cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = c.Id, Status='Closed', Origin='Concierge'));
 cases.add(new case(Subject = 'Starting maternity leave', ContactId = c.Id, Status='Closed', Origin='Concierge'));
 insert cases;
+
+// publish the articles
+for (Knowledge__ka ka:[select id from Knowledge__ka]){
+    KbManagement.PublishingService.publishArticle(ka.Id, true);
+}
+
+// assign them to data categories
+List<Knowledge__DataCategorySelection> DCs = new List<Knowledge__DataCategorySelection>();
+for (Knowledge__kav kav:[select id from Knowledge__kav]){
+    DCs.add( new Knowledge__DataCategorySelection(ParentId = kav.Id, dataCategoryGroupName = 'All', dataCategoryName='All'));
+}
+insert DCs;
