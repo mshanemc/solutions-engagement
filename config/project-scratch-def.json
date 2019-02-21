@@ -2,7 +2,7 @@
   "orgName": "solutions-engagement",
   "edition": "Developer",
   "features": [
-    "Communities", "SiteDotCom", "Sites", "Knowledge"
+    "Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud"
   ],
   "settings": {
     "liveAgentSettings" : {

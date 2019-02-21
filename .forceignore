@@ -8,6 +8,8 @@ package.xml
 
 # appMenu bug
 AppSwitcher.appMenu
+Profiles
+**/profiles
 **/appMenus
 
 

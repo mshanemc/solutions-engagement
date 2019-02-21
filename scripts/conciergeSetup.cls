@@ -29,8 +29,8 @@ for (Knowledge__ka ka:[select id from Knowledge__ka]){
 }
 
 // assign them to data categories
-List<Knowledge__DataCategorySelection> DCs = new List<Knowledge__DataCategorySelection>();
-for (Knowledge__kav kav:[select id from Knowledge__kav]){
-    DCs.add( new Knowledge__DataCategorySelection(ParentId = kav.Id, dataCategoryGroupName = 'All', dataCategoryName='All'));
-}
-insert DCs;
+// List<Knowledge__DataCategorySelection> DCs = new List<Knowledge__DataCategorySelection>();
+// for (Knowledge__kav kav:[select id from Knowledge__kav]){
+//     DCs.add( new Knowledge__DataCategorySelection(ParentId = kav.Id, dataCategoryGroupName = 'All', dataCategoryName='All'));
+// }
+// insert DCs;
