@@ -13,6 +13,7 @@
           <property name="backgroundImage" type="String" description="fully qualified url"/>          
           <property name="backgroundColor" type="String" description="include the #" />          
           <property name="maxHeight" type="String" />                          
+          <property name="minHeight" type="String" />                          
       </targetConfig>
   </targetConfigs>
 </LightningComponentBundle>

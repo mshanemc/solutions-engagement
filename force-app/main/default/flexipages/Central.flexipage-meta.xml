@@ -12,7 +12,14 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>headline</name>
-                <value>Electron HQ</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>maxHeight</name>
+                <value>150px</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>minHeight</name>
+                <value>150px</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>subhead</name>
