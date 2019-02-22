@@ -43,3 +43,4 @@ sfdx shane:user:photo -g Sir -l Boss -f assets/ceo.jpeg
 sfdx shane:user:photo -g Jesse -l Sanchez -f assets/jesse.jpeg
 
 sfdx shane:user:allPhotos -f assets/userPhotos
+sfdx shane:group:photo -f assets/groupPhotos/dog.png -g "Remote Workers"
