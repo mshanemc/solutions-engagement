@@ -7,6 +7,10 @@
                 <value>#5784ab</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>backgroundImage</name>
+                <value>https://github.com/mshanemc/electron-theme/blob/master/assets/banner.png?raw=true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>headline</name>
                 <value>Electron HQ</value>
             </componentInstanceProperties>
