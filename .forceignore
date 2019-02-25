@@ -9,7 +9,7 @@ package.xml
 # appMenu bug
 AppSwitcher.appMenu
 Profiles
-**/profiles
+# **/profiles
 **/appMenus
 **/flexipages/LightningService_UtilityBar.flexipage-meta.xml
 
