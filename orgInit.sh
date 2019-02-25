@@ -14,7 +14,7 @@ sfdx force:user:create Firstname=Report Lastname=Two IsActive=false Title=Design
 sfdx force:user:create Firstname=Report Lastname=Three IsActive=false Title=Engineer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Four IsActive=false Title=Engineer MobilePhone=8324728021
 sfdx force:user:create Firstname=Report Lastname=Five IsActive=false Title=Engineer MobilePhone=8324728021
-sfdx force:user:create Firstname=Sir Lastname=Boss IsActive=false Title=CEO MobilePhone=8324728021
+sfdx force:user:create Firstname=Shannon Lastname=Duffy IsActive=false Title=CEO MobilePhone=8324728021
 sfdx force:apex:execute -f scripts/orgChartSetup.cls
 
 sfdx force:apex:execute -f scripts/connectedAppSetup.cls

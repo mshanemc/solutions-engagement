@@ -1,7 +1,7 @@
 user main = [select title, managerId, MobilePhone from user where firstname = 'Jenny' and lastname = 'Nunez'];
 user integ = [select id, title, MobilePhone, managerId from user where firstname = 'Integration' and lastname = 'User'];
 user sec = [select id, title, ManagerId, MobilePhone from user where firstname = 'Security' and lastname = 'User'];
-user ceo = [select id, title, MobilePhone from user where firstname = 'Sir' and lastname = 'Boss'];
+user ceo = [select id, title, MobilePhone from user where firstname = 'Shannon' and lastname = 'Duffy'];
 
 main.managerId = integ.id;
 main.mobilePhone = '8324728021';
