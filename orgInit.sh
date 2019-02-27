@@ -2,7 +2,7 @@ sfdx shane:org:create -f config/project-scratch-def.json -d 7 -s -n --userprefix
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 
 # cadalys concierge takes a while, so bulk api should be reliably finished.  probably.  hopefully.
-sfdx force:package:install --package 04t460000027gmI -w 50 -r
+sfdx force:package:install --package 04t46000001zoPFAAY -w 50 -r
 sfdx force:source:push
 sfdx force:user:permset:assign -n solutions
 sfdx force:data:bulk:upsert -f data/Knowledge__kav.csv -i id -s Knowledge__kav
