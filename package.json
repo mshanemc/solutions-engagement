@@ -27,5 +27,6 @@
   "homepage": "https://github.com/mshanemc/solutions-engagement",
   "devDependencies": {
     "nodemon": "^1.18.3"
-  }
+  },
+  "dependencies": {}
 }
