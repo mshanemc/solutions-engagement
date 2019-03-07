@@ -31,18 +31,18 @@ cases.add(new case(Subject = 'Beneficiary Changes (new baby!)', ContactId = jn.I
 cases.add(new case(Subject = 'Starting maternity leave', ContactId = jn.Id, Status='Closed', Origin='Concierge'));
 
 List<Contact> otherEmployees = new List<Contact>();
-otherEmployees.add(new contact(FirstName = 'Isaac', LastName = 'Payne'));
-otherEmployees.add(new contact(FirstName = 'Bandar', LastName = 'El-Eita'));
-otherEmployees.add(new contact(FirstName = 'Jessica', LastName = 'Liu'));
-otherEmployees.add(new contact(FirstName = 'Shannon', LastName = 'Duffy'));
-otherEmployees.add(new contact(FirstName = 'Eric', LastName = 'Igerbase'));
+otherEmployees.add(new contact(FirstName = 'Isaac', LastName = 'Payne', Title = 'CFO', Phone = '8324728021'));
+otherEmployees.add(new contact(FirstName = 'Bandar', LastName = 'El-Eita', Title = 'VP Manufacturing', Phone = '8324728021'));
+otherEmployees.add(new contact(FirstName = 'Jessica', LastName = 'Liu', Title = 'VP PR and Events', Phone = '8324728021'));
+otherEmployees.add(new contact(FirstName = 'Shannon', LastName = 'Duffy', Title = 'CEO', Phone = '8324728021'));
+otherEmployees.add(new contact(FirstName = 'Eric', LastName = 'Igerbase', Title = 'Director Customer Support', Phone = '8324728021'));
 insert otherEmployees;
 
-cases.add(new case(Subject = 'Laptop Replacement', ContactId = otherEmployees[0].Id, Status='Working', Origin='Concierge'));
-cases.add(new case(Subject = 'Lost my phone again (sorry!)', ContactId = otherEmployees[1].Id, Status='New', Origin='Concierge'));
-cases.add(new case(Subject = 'Laptop screen has weird glowing ring in the middle', ContactId = otherEmployees[2].Id, Status='Working', Origin='Concierge'));
-cases.add(new case(Subject = 'VPN is super slow', ContactId = otherEmployees[3].Id, Status='Escalated', Origin='Concierge'));
-cases.add(new case(Subject = 'I need Access to Photoshop', ContactId = otherEmployees[4].Id, Status='New', Origin='Concierge'));
+cases.add(new case(Subject = 'Laptop Replacement', ContactId = otherEmployees[0].Id, Status='Working', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'Lost my phone again (sorry!)', ContactId = otherEmployees[1].Id, Status='New', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'Laptop screen has weird glowing ring in the middle', ContactId = otherEmployees[2].Id, Status='Working', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'VPN is super slow', ContactId = otherEmployees[3].Id, Status='Escalated', Origin='Concierge', Type='IT'));
+cases.add(new case(Subject = 'I need Access to Photoshop', ContactId = otherEmployees[4].Id, Status='New', Origin='Concierge', Type='IT'));
 
 insert cases;
 
