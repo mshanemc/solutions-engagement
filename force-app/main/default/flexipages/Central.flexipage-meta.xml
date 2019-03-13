@@ -12,6 +12,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>headline</name>
+                <value>Electron Motors</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>maxHeight</name>
