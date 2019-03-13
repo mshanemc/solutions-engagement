@@ -5,6 +5,8 @@ for (cncrgdemo__Concierge_Settings__c setting:settings) {
         setting.cncrgdemo__Value__c = 'Bridge';
     } else if (setting.name == 'Display Company Logo') {
         setting.cncrgdemo__Value__c = 'false';
+    } else if (setting.name == 'Text to Display in Article Preview'){
+        setting.cncrgdemo__Value__c = 'false';
     }
 }
 update settings;
