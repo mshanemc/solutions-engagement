@@ -1,5 +1,6 @@
 {
   "orgName": "solutions-engagement",
+  "adminEmail": "platformpmmdemos@gmail.com",
   "edition": "Developer",
   "features": [
     "Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud"
