@@ -34,8 +34,8 @@ sfdx force:data:bulk:upsert -f data/observations.csv -s Observation__c -i id
 
 sfdx force:apex:execute -f scripts/conciergeSetup.cls
 
-sfdx shane:org:reauth -r --json
-# sfdx shane:theme:activate -n Electron
+# sfdx shane:org:reauth -r --json
+sfdx shane:theme:activate -n Electron
 sfdx force:org:open
 sfdx shane:user:password:set -g Jenny -l Nunez -p sfdx1234
 
