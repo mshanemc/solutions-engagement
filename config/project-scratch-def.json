@@ -2,14 +2,15 @@
   "orgName": "solutions-engagement",
   "adminEmail": "platformpmmdemos@gmail.com",
   "edition": "Developer",
-  "features": [
-    "Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud"
-  ],
+  "features": ["Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud", "Chatbot"],
   "settings": {
-    "liveAgentSettings" : {
-      "enableLiveAgent" : true
+    "botSettings": {
+      "enableBots": true
     },
-    "knowledgeSettings" : {
+    "liveAgentSettings": {
+      "enableLiveAgent": true
+    },
+    "knowledgeSettings": {
       "enableKnowledge": true,
       "enableLightningKnowledge": true
     },
