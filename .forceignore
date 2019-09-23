@@ -7,10 +7,10 @@ package.xml
 **/.eslintrc.json
 
 # appMenu bug
-AppSwitcher.appMenu
+# AppSwitcher.appMenu
 Profiles
 # **/profiles
-**/appMenus
+# **/appMenus
 **/flexipages/LightningService_UtilityBar.flexipage-meta.xml
 
 

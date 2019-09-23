@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AppMenu xmlns="http://soap.sforce.com/2006/04/metadata">
    <appMenuItems>
+   
       <appMenuItem>
          <name>standard__Sales</name>
          <type>CustomApplication</type>
@@ -23,6 +24,10 @@
       </appMenuItem>
       <appMenuItem>
          <name>goToMeeting</name>
+         <type>ConnectedApp</type>
+      </appMenuItem>
+      <appMenuItem>
+         <name>Workday</name>
          <type>ConnectedApp</type>
       </appMenuItem>
    </appMenuItems>
