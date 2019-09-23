@@ -20,6 +20,9 @@
       "pathAssistantsEnabled": true,
       "s1EncryptedStoragePref2": false,
       "selfSetPasswordInApi": true
+    },
+    "mobileSettings": {
+      "enableLightningOnMobile": true
     }
   }
 }
