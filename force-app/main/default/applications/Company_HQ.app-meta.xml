@@ -13,11 +13,13 @@
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
     <description>Start here!</description>
+    <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>HQ</label>
     <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
     <tabs>standard-home</tabs>
     <tabs>standard-Feed</tabs>
     <tabs>standard-CollaborationGroup</tabs>
