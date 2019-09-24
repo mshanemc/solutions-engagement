@@ -1,6 +1,6 @@
 permissionSet ps = [select id from permissionSet where name = 'solutions'];
 
-list<string> appNames = new list<string> {'Concur', 'Google Calendar', 'GDrive', 'Gmail', 'GoToMeeting'}; 
+list<string> appNames = new list<string> {'Concur', 'Google Calendar', 'GDrive', 'Gmail', 'GoToMeeting', 'Workday'}; 
 List<ConnectedApplication> apps = [select id, name from ConnectedApplication where Name in:appNames];
 
 List<SetupEntityAccess> SEAs = new List<SetupEntityAccess>();
