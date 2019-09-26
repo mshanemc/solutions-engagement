@@ -43,7 +43,7 @@ sfdx shane:user:password:set -g Jenny -l Nunez -p sfdx1234
 
 # set the photos properly instead of my evil version
 sfdx shane:user:photo -g William -l Loman -f assets/loman.jpeg
-sfdx shane:user:photo -g Shannon -l Duffy -f assets/ceo.jpeg
+sfdx shane:user:photo -g Shannon -l Duffy -f assets/shannon.png
 sfdx shane:user:photo -g Jesse -l Sanchez -f assets/jesse.jpeg
 
 sfdx shane:user:allPhotos -f assets/userPhotos
