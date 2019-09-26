@@ -1,0 +1,8 @@
+{
+  "appPageId" : "303e26b4-4cec-490e-9930-23ef0e5ce8ec",
+  "id" : "2f480cce-03cd-4b78-9a25-04ee23771d91",
+  "label" : "Stream Detail",
+  "routeType" : "detail-0Fq",
+  "type" : "route",
+  "urlPrefix" : "streams"
+}
