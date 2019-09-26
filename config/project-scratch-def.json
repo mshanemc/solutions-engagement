@@ -2,10 +2,21 @@
   "orgName": "solutions-engagement",
   "adminEmail": "platformpmmdemos@gmail.com",
   "edition": "Developer",
-  "features": ["Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud", "Chatbot"],
+  "features": [
+    "Communities",
+    "SiteDotCom",
+    "Sites",
+    "Knowledge",
+    "LightningServiceConsole",
+    "ServiceCloud",
+    "Chatbot"
+  ],
   "settings": {
     "botSettings": {
       "enableBots": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
     },
     "liveAgentSettings": {
       "enableLiveAgent": true
@@ -13,6 +24,9 @@
     "knowledgeSettings": {
       "enableKnowledge": true,
       "enableLightningKnowledge": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
     },
     "orgPreferenceSettings": {
       "networksEnabled": true,
