@@ -1,5 +1,6 @@
 sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
+sfdx force:package:install --package 04t6A000003OhCUQA0 --wait 50
 
 sfdx force:package:install --package 04t46000001zoPFAAY -w 50 -r
 sfdx force:source:deploy -p certs
