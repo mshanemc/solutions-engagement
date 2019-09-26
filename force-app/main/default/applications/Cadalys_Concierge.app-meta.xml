@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <logo>concierge</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Electron Concierge</label>
+    <description>All your HR,IT,Facilities needs</description>
+    <navType>Standard</navType>
+    <tabs>cncrgdemo__Concierge_LEX_Tab</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Cadalys_Concierge_UtilityBar</utilityBar>
+</CustomApplication>
