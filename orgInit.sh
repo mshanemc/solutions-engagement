@@ -1,25 +1,28 @@
 sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
-sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
-sfdx force:package:install --package 04t6A000003OhCUQA0 --wait 50
-
-sfdx force:package:install --package 04t46000001zoPFAAY -w 50 -r
 sfdx force:source:deploy -p certs
+# community boilerplate to support bot preview
+sfdx force:package:install --package 04t6A000003OhCUQA0 -r
+# concierge
+sfdx force:package:install --package 04t46000001zoPFAAY -r
 
-# lots of local edits before push
+# local edits before push
 sfdx shane:cert:unhardcode -f force-app/main/default/samlssoconfigs/MyIDP.samlssoconfig-meta.xml -l TheCert
 
+sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 sfdx force:source:push
 
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s buttonId -q "select id from liveChatButton" --write --truncate
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s deploymentId -q "select id from LiveChatDeployment" --write --truncate
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s eswConfigId -q "select id from EmbeddedServiceConfig" --write -t
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s orgId --variable OrgId --write --truncate
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentURL -q "select id, LiveAgentChatUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentChatUrl -t
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentContentURL -q "select id, LiveAgentContentUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentContentUrl -t
-sfdx shane:communities:json:modify -f force-app/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseCoreURL --variable InstanceUrl --write
+sfdx force:source:deploy -p communities
+
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s buttonId -q "select id from liveChatButton" --write --truncate
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s deploymentId -q "select id from LiveChatDeployment" --write --truncate
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s eswConfigId -q "select id from EmbeddedServiceConfig" --write -t
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s orgId --variable OrgId --write --truncate
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentURL -q "select id, LiveAgentChatUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentChatUrl -t
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentContentURL -q "select id, LiveAgentContentUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentContentUrl -t
+sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseCoreURL --variable InstanceUrl --write
 
 # push again for communities local edits
-sfdx force:source:push
+sfdx force:source:deploy -p communities
 
 sfdx force:user:permset:assign -n solutions
 sfdx force:data:bulk:upsert -f data/Knowledge__kav.csv -i id -s Knowledge__kav
