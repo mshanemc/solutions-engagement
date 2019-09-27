@@ -2,13 +2,14 @@ sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefi
 sfdx force:source:deploy -p certs
 # community boilerplate to support bot preview
 sfdx force:package:install --package 04t6A000003OhCUQA0 -r
+
 # concierge
 sfdx force:package:install --package 04t46000001zoPFAAY -r
 
-# local edits before push
 sfdx shane:cert:unhardcode -f force-app/main/default/samlssoconfigs/MyIDP.samlssoconfig-meta.xml -l TheCert
-
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
+
+# local edits before push, will cause a wait
 sfdx force:source:push
 
 sfdx force:source:deploy -p communities
