@@ -61,3 +61,15 @@ update kavs;
 for (Knowledge__ka ka:[select id from Knowledge__ka]){
     KbManagement.PublishingService.publishArticle(ka.Id, true);
 }
+
+list<cncrgdemo__Action_Settings__c> actions = new list<cncrgdemo__Action_Settings__c>();
+// add chat feature
+for (Knowledge__ka ka:[select id from Knowledge__ka]){
+    cncrgdemo__Action_Settings__c action = new cncrgdemo__Action_Settings__c();
+    action.cncrgdemo__Live_Chat__c = true;
+    action.cncrgdemo__Active__c = true;
+    action.cncrgdemo__ArticleId__c = ka.Id;
+    actions.add(action);
+}
+
+insert actions;
