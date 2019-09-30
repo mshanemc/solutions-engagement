@@ -20,6 +20,6 @@
     <liveChatButton>EmployeeSupport</liveChatButton>
     <liveChatDeployment>live_agent_setup_flow</liveChatDeployment>
     <masterLabel>EmployeeSupport</masterLabel>
-    <prechatEnabled>true</prechatEnabled>
+    <prechatEnabled>false</prechatEnabled>
     <scenario>Service</scenario>
 </EmbeddedServiceLiveAgent>
