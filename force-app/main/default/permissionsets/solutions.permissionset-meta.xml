@@ -12,6 +12,11 @@
         <application>standard__AppLauncher</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>User.isRemote__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>solutions</label>
     <objectPermissions>
