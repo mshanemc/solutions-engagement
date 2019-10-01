@@ -54,7 +54,7 @@ sfdx force:data:bulk:upsert -f data/incident_reports.csv -s Incident_Report__c -
 sfdx force:data:bulk:upsert -f data/observations.csv -s Observation__c -i id
 
 sfdx force:apex:execute -f scripts/conciergeSetup.cls
-
+sfdx shane:concierge:chat:enable
 # sfdx shane:org:reauth -r --json
 sfdx shane:theme:activate -n Electron
 sfdx force:org:open

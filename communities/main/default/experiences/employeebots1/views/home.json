@@ -28,7 +28,7 @@
             "avatarImgURL": "",
             "defaultMinimizedText": "Chat with an Expert",
             "displayHelpButton": "true",
-            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la2-c2cs-ord.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"5720t0000008OTD\",\"eswConfigId\":\"04I0t0000000056EAA\",\"buttonId\":\"5730t0000008Oic\",\"baseCoreURL\":\"https://page-nosoftware-1088-dev-ed.cs77.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la2-c2cs-ord.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00D0t0000009RLh\"}",
+            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la2-c2cs-ord.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"5720t000000CacU\",\"eswConfigId\":\"04I0t0000004CF1EAM\",\"buttonId\":\"5730t000000Calv\",\"baseCoreURL\":\"https://fun-agility-3120-dev-ed.cs77.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la2-c2cs-ord.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00D0t0000009ROW\"}",
             "externalScripts": "",
             "externalStyles": "",
             "fallbackRouting": "",
