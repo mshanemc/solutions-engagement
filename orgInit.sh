@@ -3,11 +3,11 @@ sfdx force:source:deploy -p certs
 # community boilerplate to support bot preview
 sfdx force:package:install --package 04t6A000003OhCUQA0 -r
 
-# concierge
-sfdx force:package:install --package 04t46000001zoPFAAY -r
-
 sfdx shane:cert:unhardcode -f force-app/main/default/samlssoconfigs/MyIDP.samlssoconfig-meta.xml -l TheCert
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
+
+# concierge
+sfdx force:package:install --package 04t46000001zoPFAAY -r --wait 50
 
 # local edits before push, will cause a wait
 sfdx force:source:push
@@ -21,6 +21,7 @@ sfdx shane:communities:json:modify -f communities/main/default/experiences/emplo
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentURL -q "select id, LiveAgentChatUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentChatUrl -t
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentContentURL -q "select id, LiveAgentContentUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentContentUrl -t
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseCoreURL --variable InstanceUrl --write
+sfdx force:data:record:update -s User -w "Name='Jenny Nunez'" -v "isRemote__c=true"
 
 # push again for communities local edits
 sfdx force:source:deploy -p communities
