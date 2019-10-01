@@ -21,7 +21,7 @@ sfdx shane:communities:json:modify -f communities/main/default/experiences/emplo
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentURL -q "select id, LiveAgentChatUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentChatUrl -t
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseLiveAgentContentURL -q "select id, LiveAgentContentUrl from EmbeddedServiceLiveAgent" --write --queryfield LiveAgentContentUrl -t
 sfdx shane:communities:json:modify -f communities/main/default/experiences/employeebots1/views/home.json -i 69c03077-932a-4c08-b932-46baec5a7c86 -p eswConfigurationJSON -s baseCoreURL --variable InstanceUrl --write
-sfdx force:data:record:update -s User -w "Name='Jenny Nunez'" -v "isRemote__c=true"
+sfdx force:data:record:update -s User -w "Name='Jenny Nunez'" -v "isRemote__c=true Street='123 Main' City=Magnolia State=TX PostalCode=77355"
 
 # push again for communities local edits
 sfdx force:source:deploy -p communities
