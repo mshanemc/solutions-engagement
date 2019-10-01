@@ -9,6 +9,28 @@
             <type>Message</type>
         </botSteps>
         <botSteps>
+            <botVariableOperation>
+                <botInvocation>
+                    <invocationActionName>CheckUserRemoteness</invocationActionName>
+                    <invocationActionType>flow</invocationActionType>
+                    <invocationMappings>
+                        <parameterName>UserId</parameterName>
+                        <type>Input</type>
+                        <variableName>EndUserId</variableName>
+                        <variableType>ContextVariable</variableType>
+                    </invocationMappings>
+                    <invocationMappings>
+                        <parameterName>Remote</parameterName>
+                        <type>Output</type>
+                        <variableName>isRemote</variableName>
+                        <variableType>ConversationVariable</variableType>
+                    </invocationMappings>
+                </botInvocation>
+                <type>Set</type>
+            </botVariableOperation>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
             <botNavigation>
                 <botNavigationLinks>
                     <targetBotDialog>Main_Menu</targetBotDialog>
@@ -91,7 +113,7 @@
     <botDialogs>
         <botSteps>
             <botMessages>
-                <message>OK, so it&#39;s broken.  Let&#39;s get a new one shipped to you.</message>
+                <message>OK, so it&#39;s broken.  Let&#39;s get you a new one</message>
             </botMessages>
             <type>Message</type>
         </botSteps>
@@ -113,7 +135,79 @@
             <type>Message</type>
         </botSteps>
         <botSteps>
-            <type>Wait</type>
+            <botVariableOperation>
+                <botMessages>
+                    <message>To confirm...you want your current phone deactivated and wiped?</message>
+                </botMessages>
+                <botQuickReplyOptions>
+                    <literalValue>Yes</literalValue>
+                </botQuickReplyOptions>
+                <botQuickReplyOptions>
+                    <literalValue>No</literalValue>
+                </botQuickReplyOptions>
+                <botVariableOperands>
+                    <disableAutoFill>true</disableAutoFill>
+                    <sourceName>_Boolean</sourceName>
+                    <sourceType>StandardMlSlotClass</sourceType>
+                    <targetName>deactivate</targetName>
+                    <targetType>ConversationVariable</targetType>
+                </botVariableOperands>
+                <quickReplyType>Static</quickReplyType>
+                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
+                <type>Collect</type>
+            </botVariableOperation>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>deactivate</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>Equals</operatorType>
+                <rightOperandValue>false</rightOperandValue>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Confused</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Call</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>OK, a security case is created to get that going.  Now, let&#39;s get you a new phone.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botStepConditions>
+                <leftOperandName>isRemote</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>Equals</operatorType>
+                <rightOperandValue>true</rightOperandValue>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>new_phone_remote</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Redirect</type>
+                </botNavigation>
+                <type>Navigation</type>
+            </botSteps>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>new_phone_office</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
+            <type>Navigation</type>
         </botSteps>
         <description>phone is lost</description>
         <developerName>Lost</developerName>
@@ -122,10 +216,80 @@
         <mlIntentTrainingEnabled>true</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Since you work in an office, the easiest thing to do is to go to your nearest IT station and get a new one.</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>new_phone_office</developerName>
+        <label>new phone (office)</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botVariableOperation>
+                <botInvocation>
+                    <invocationActionName>GetUserAddress</invocationActionName>
+                    <invocationActionType>flow</invocationActionType>
+                    <invocationMappings>
+                        <parameterName>UserId</parameterName>
+                        <type>Input</type>
+                        <variableName>EndUserId</variableName>
+                        <variableType>ContextVariable</variableType>
+                    </invocationMappings>
+                    <invocationMappings>
+                        <parameterName>User</parameterName>
+                        <type>Output</type>
+                        <variableName>User</variableName>
+                        <variableType>ConversationVariable</variableType>
+                    </invocationMappings>
+                </botInvocation>
+                <type>Set</type>
+            </botVariableOperation>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>Since you&#39;re remote, we&#39;re going to overnight you a new phone.  Confirm that you want it sent to {!User.Street} {!User.City} {!User.State} {!User.PostalCode}</message>
+            </botMessages>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>new_phone_remote</developerName>
+        <label>new phone remote</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
     <conversationSystemDialogs>
         <dialog>No_Agent_Available</dialog>
         <type>TransferFailed</type>
     </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>deactivate</developerName>
+        <label>deactivate</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>hasPhone</developerName>
+        <label>hasPhone</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Boolean</dataType>
+        <developerName>isRemote</developerName>
+        <label>isRemote</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Object</dataType>
+        <developerName>User</developerName>
+        <label>User</label>
+    </conversationVariables>
     <entryDialog>Welcome</entryDialog>
     <mainMenuDialog>Main_Menu</mainMenuDialog>
 </BotVersion>
