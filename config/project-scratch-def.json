@@ -3,13 +3,14 @@
   "adminEmail": "platformpmmdemos@gmail.com",
   "edition": "Developer",
   "features": [
+    "Chatbot",
     "Communities",
-    "SiteDotCom",
-    "Sites",
     "Knowledge",
     "LightningServiceConsole",
+    "LiveAgent",
     "ServiceCloud",
-    "Chatbot"
+    "SiteDotCom",
+    "Sites"
   ],
   "settings": {
     "botSettings": {
