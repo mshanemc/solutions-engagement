@@ -5,6 +5,7 @@
   "features": [
     "Chatbot",
     "Communities",
+    "EinsteinAnalyticsPlus",
     "Knowledge",
     "LightningServiceConsole",
     "LiveAgent",
