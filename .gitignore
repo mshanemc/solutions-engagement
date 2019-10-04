@@ -1,2 +1,4 @@
 node_modules
 .vscode/settings.json
+communities/main/default/experiences/employeebots1/views/home.json
+force-app/main/default/samlssoconfigs/MyIDP.samlssoconfig-meta.xml

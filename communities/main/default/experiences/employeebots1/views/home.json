@@ -28,7 +28,7 @@
             "avatarImgURL": "",
             "defaultMinimizedText": "Chat with an Expert",
             "displayHelpButton": "true",
-            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la1-c1cs-ia2.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"572R00000004DI9\",\"eswConfigId\":\"04IR000000000BnMAI\",\"buttonId\":\"573R00000004DHB\",\"baseCoreURL\":\"https://enterprise-inspiration-8532-dev-ed.cs2.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la1-c1cs-ia2.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00DR00000002luf\"}",
+            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la2-c2cs-ord.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"5720U0000004CJ2\",\"eswConfigId\":\"04I0U000000003eUAA\",\"buttonId\":\"5730U0000004CVw\",\"baseCoreURL\":\"https://innovation-page-6282-dev-ed.cs97.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la2-c2cs-ord.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00D0U000000DOMG\"}",
             "externalScripts": "",
             "externalStyles": "",
             "fallbackRouting": "",
