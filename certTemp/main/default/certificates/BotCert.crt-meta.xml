@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Certificate>
+    <caSigned>false</caSigned>
+    <encryptedWithPlatformEncryption>false</encryptedWithPlatformEncryption>
+    <keySize>2048</keySize>
+    <masterLabel>BotCert</masterLabel>
+    <privateKeyExportable>false</privateKeyExportable>
+</Certificate>
