@@ -28,7 +28,7 @@
             "avatarImgURL": "",
             "defaultMinimizedText": "Chat with an Expert",
             "displayHelpButton": "true",
-            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la2-c2cs-ord.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"5720U00000000DJ\",\"eswConfigId\":\"04I0U000000CaXZUA0\",\"buttonId\":\"5730U00000000Is\",\"baseCoreURL\":\"https://momentum-innovation-3099-dev-ed.cs97.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la2-c2cs-ord.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00D0U000000DPO8\"}",
+            "eswConfigurationJSON": "{\"entryFeature\":\"LiveAgent\",\"baseLiveAgentContentURL\":\"https://c.la4-c2cs-phx.salesforceliveagent.com/content\",\"enabledFeatures\":[\"LiveAgent\"],\"deploymentId\":\"57221000000014q\",\"eswConfigId\":\"04I210000008OMvEAM\",\"buttonId\":\"57321000000017Q\",\"baseCoreURL\":\"https://drive-velocity-5629-dev-ed.cs26.my.salesforce.com\",\"baseLiveAgentURL\":\"https://d.la4-c2cs-phx.salesforceliveagent.com/chat\",\"eswConfigDevName\":\"EmployeeSupport\",\"isOfflineCasesEnabled\":\"0\",\"eswLiveAgentDevName\":\"EmployeeSupport\",\"orgId\":\"00D210000001SEu\"}",
             "externalScripts": "",
             "externalStyles": "",
             "fallbackRouting": "",
