@@ -81,6 +81,15 @@
             <mlIntentUtterances>
                 <utterance>cracked</utterance>
             </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>screen stays dark</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>screen is no longer readable</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>can&#39;t turn the phone on</utterance>
+            </mlIntentUtterances>
         </mlIntents>
         <mlIntents>
             <description>phone is lost</description>
@@ -149,56 +158,27 @@
             <mlIntentUtterances>
                 <utterance>lost</utterance>
             </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>dropped in the lake</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>dropped in the ocean</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>stolen</utterance>
+            </mlIntentUtterances>
+            <mlIntentUtterances>
+                <utterance>missing and can&#39;t find</utterance>
+            </mlIntentUtterances>
         </mlIntents>
         <name>test</name>
     </botMlDomain>
-    <contextVariables>
-        <contextVariableMappings>
-            <SObjectType>LiveChatTranscript</SObjectType>
-            <fieldName>LiveChatTranscript.ChatKey</fieldName>
-            <messageType>WebChat</messageType>
-        </contextVariableMappings>
-        <dataType>Text</dataType>
-        <developerName>ChatKey</developerName>
-        <label>Chat Key</label>
-    </contextVariables>
-    <contextVariables>
-        <contextVariableMappings>
-            <SObjectType>LiveChatTranscript</SObjectType>
-            <fieldName>LiveChatTranscript.ContactId</fieldName>
-            <messageType>WebChat</messageType>
-        </contextVariableMappings>
-        <dataType>Id</dataType>
-        <developerName>ContactId</developerName>
-        <label>Contact Id</label>
-    </contextVariables>
-    <contextVariables>
-        <contextVariableMappings>
-            <SObjectType>LiveChatTranscript</SObjectType>
-            <fieldName>LiveChatTranscript.LiveChatVisitorId</fieldName>
-            <messageType>WebChat</messageType>
-        </contextVariableMappings>
-        <dataType>Id</dataType>
-        <developerName>EndUserId</developerName>
-        <label>End User Id</label>
-    </contextVariables>
-    <contextVariables>
-        <contextVariableMappings>
-            <SObjectType>LiveChatTranscript</SObjectType>
-            <fieldName>LiveChatTranscript.Id</fieldName>
-            <messageType>WebChat</messageType>
-        </contextVariableMappings>
-        <dataType>Id</dataType>
-        <developerName>RoutableId</developerName>
-        <label>Routable Id</label>
-    </contextVariables>
-    <label>test</label>
     <botVersions>
         <fullName>v1</fullName>
         <botDialogs>
             <botSteps>
                 <botMessages>
-                    <message>I&#39;m the phone replacement bot</message>
+                    <message>Hi, I&#39;m the phone replacement bot</message>
                 </botMessages>
                 <type>Message</type>
             </botSteps>
@@ -620,4 +600,45 @@
         <entryDialog>Welcome</entryDialog>
         <mainMenuDialog>Main_Menu</mainMenuDialog>
     </botVersions>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.ChatKey</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Text</dataType>
+        <developerName>ChatKey</developerName>
+        <label>Chat Key</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.ContactId</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>ContactId</developerName>
+        <label>Contact Id</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.LiveChatVisitorId</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>EndUserId</developerName>
+        <label>End User Id</label>
+    </contextVariables>
+    <contextVariables>
+        <contextVariableMappings>
+            <SObjectType>LiveChatTranscript</SObjectType>
+            <fieldName>LiveChatTranscript.Id</fieldName>
+            <messageType>WebChat</messageType>
+        </contextVariableMappings>
+        <dataType>Id</dataType>
+        <developerName>RoutableId</developerName>
+        <label>Routable Id</label>
+    </contextVariables>
+    <label>test</label>
 </Bot>
