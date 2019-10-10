@@ -1,7 +1,7 @@
 sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx force:source:deploy -p certs
 # community boilerplate to support bot preview
-sfdx force:package:install --package 04t6A000003OhCUQA0 -r -b 30 -w 30
+sfdx force:package:install --package 04t6A000003OhCUQA0 -r
 
 sfdx shane:cert:unhardcode -f force-app/main/default/samlssoconfigs/MyIDP.samlssoconfig-meta.xml -l BotCert
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
