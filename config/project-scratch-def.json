@@ -3,22 +3,37 @@
   "adminEmail": "platformpmmdemos@gmail.com",
   "edition": "Developer",
   "features": [
-    "Communities", "SiteDotCom", "Sites", "Knowledge", "LightningServiceConsole", "ServiceCloud"
+    "Communities",
+    "SiteDotCom",
+    "Sites",
+    "Knowledge",
+    "LightningServiceConsole",
+    "ServiceCloud"
   ],
   "settings": {
-    "liveAgentSettings" : {
-      "enableLiveAgent" : true
+    "liveAgentSettings": {
+      "enableLiveAgent": true
     },
-    "knowledgeSettings" : {
+    "knowledgeSettings": {
       "enableKnowledge": true,
       "enableLightningKnowledge": true
     },
-    "orgPreferenceSettings": {
-      "networksEnabled": true,
-      "s1DesktopEnabled": true,
-      "pathAssistantsEnabled": true,
-      "s1EncryptedStoragePref2": false,
-      "selfSetPasswordInApi": true
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "pathAssistantSettings": {
+      "pathAssistantEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "passwordPolicies": {
+        "enableSetPasswordInApi": true
+      }
     }
   }
 }
