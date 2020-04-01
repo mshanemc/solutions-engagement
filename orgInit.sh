@@ -2,7 +2,7 @@
 sfdx shane:org:create -f config/snapshot-project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 
-# cadalys concierge takes a while, so bulk api should be reliably finished.  probably.  hopefully.
+# disabled for now because it's part of the org snapshot
 # sfdx force:package:install --package 04t4o000001ZhNb -w 50 -r
 sfdx force:source:push
 sfdx force:user:permset:assign -n solutions
