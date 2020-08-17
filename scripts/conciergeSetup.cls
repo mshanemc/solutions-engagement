@@ -1,13 +1,15 @@
-list<cncrgdemo2__Concierge_Settings__c> settings = [select id, name, cncrgdemo__Value__c from cncrgdemo2__Concierge_Settings__c];
+// update some Concierge settings
+list<cncrgdemo2__Concierge_Settings__c> settings = [select id, name, cncrgdemo2__Value__c from cncrgdemo2__Concierge_Settings__c];
 for (cncrgdemo2__Concierge_Settings__c setting:settings) {
     if (setting.name == 'Background file name for App') {
-        setting.cncrgdemo__Value__c = 'Bridge';
+        setting.cncrgdemo2__Value__c = 'Bridge';
     } else if (setting.name == 'Display Company Logo') {
-        setting.cncrgdemo__Value__c = 'false';
+        setting.cncrgdemo2__Value__c = 'false';
     } else if (setting.name == 'Text to Display in Article Preview'){
-        setting.cncrgdemo__Value__c = 'false';
+        setting.cncrgdemo2__Value__c = 'false';
     }
 }
+update settings;
 update settings;
 
 // put the contact on our user
