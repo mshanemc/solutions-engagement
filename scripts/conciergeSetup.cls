@@ -21,7 +21,7 @@ insert x;
 // put the contact on our user
 List<case> cases = new List<case>();
 
-contact jn = new contact(FirstName = 'Jenny', LastName = 'Nunez', Email = 'shane.mclaughlin@salesforce.com', cncrgdemo__UserId__c = UserInfo.getUserId());
+contact jn = new contact(FirstName = 'Workshop', LastName = 'User', Email = 'shane.mclaughlin@salesforce.com', cncrgdemo__UserId__c = UserInfo.getUserId());
 insert jn;
 
 // let's have some ticket history for Jenny
