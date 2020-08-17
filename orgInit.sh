@@ -1,9 +1,7 @@
-# sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 
-# disabled for now because it's part of the org snapshot
-# sfdx force:package:install --package 04t4o000001ZhNb -w 50 -r
+sfdx force:package:install --package 04t4P000002qm6f -w 50 -r
 sfdx force:source:push
 sfdx force:user:permset:assign -n solutions
 sfdx force:data:bulk:upsert -f data/Knowledge__kav.csv -i id -s Knowledge__kav
