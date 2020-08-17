@@ -1,6 +1,5 @@
-// update some Concierge settings
-list<cncrgdemo__Concierge_Settings__c> settings = [select id, name, cncrgdemo__Value__c from cncrgdemo__Concierge_Settings__c];
-for (cncrgdemo__Concierge_Settings__c setting:settings) {
+list<cncrgdemo2__Concierge_Settings__c> settings = [select id, name, cncrgdemo__Value__c from cncrgdemo2__Concierge_Settings__c];
+for (cncrgdemo2__Concierge_Settings__c setting:settings) {
     if (setting.name == 'Background file name for App') {
         setting.cncrgdemo__Value__c = 'Bridge';
     } else if (setting.name == 'Display Company Logo') {
@@ -10,13 +9,6 @@ for (cncrgdemo__Concierge_Settings__c setting:settings) {
     }
 }
 update settings;
-
-cncrgdemo__Search_Types_Settings__c x = new cncrgdemo__Search_Types_Settings__c();
-x.cncrgdemo__Active__c = true;
-x.Name = 'Concierge';
-x.cncrgdemo__Article_Type_API_Name__c = 'Concierge';
-x.cncrgdemo__Field_To_Display__c = 'Summary,';
-insert x;
 
 // put the contact on our user
 List<case> cases = new List<case>();
