@@ -1,5 +1,5 @@
 # sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
-sfdx shane:org:create -f config/snapshot-project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
+sfdx shane:org:create -f config/project-scratch-def.json -d 30 -s -n --userprefix electron --userdomain ee.demo
 sfdx force:data:record:update -s User -w "Name='User User'" -v "FirstName='Jenny' LastName='Nunez' UserPermissionsKnowledgeUser=true"
 
 # disabled for now because it's part of the org snapshot
